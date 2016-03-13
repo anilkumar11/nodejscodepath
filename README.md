@@ -65,16 +65,16 @@ hello self
 
 ### Proxy Server:
 
-Port 8001 will proxy to the echo server on port 8000.
+Port 9000 will proxy to the echo server on port 8000.
 
 ```bash
-curl -v http://127.0.0.1:8001/asdf -d "hello proxy"
+curl -v http://127.0.0.1:9000/asdf -d "hello proxy"
 * Hostname was NOT found in DNS cache
 *   Trying 127.0.0.1...
 * Connected to 127.0.0.1 (127.0.0.1) port 8001 (#0)
 > POST /asdf HTTP/1.1
 > User-Agent: curl/7.37.1
-> Host: 127.0.0.1:8001
+> Host: 127.0.0.1:9000
 > Accept: */*
 > Content-Length: 11
 > Content-Type: application/x-www-form-urlencoded
@@ -82,7 +82,7 @@ curl -v http://127.0.0.1:8001/asdf -d "hello proxy"
 * upload completely sent off: 11 out of 11 bytes
 < HTTP/1.1 200 OK
 < user-agent: curl/7.37.1
-< host: 127.0.0.1:8001
+< host: 127.0.0.1:9000
 < accept: */*
 < content-length: 11
 < content-type: application/x-www-form-urlencoded
